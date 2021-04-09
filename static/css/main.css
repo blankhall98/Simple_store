@@ -1,0 +1,228 @@
+html, body{
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    background-color:rgb(247, 247, 247);
+    scrollbar-width: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbar{
+    display: flex;
+    flex-flow: row;
+    justify-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 3em;
+    background-color: #fafafa;
+    z-index: 1001;
+    border-bottom: solid #dfdfdf 1px;
+}
+
+#nav_name{
+    display: flex;
+    font-size: 100%;
+    justify-content: space-evenly;
+    justify-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    min-width: 20%;
+    height: 100%;
+}
+
+#nav_sections{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    min-width: 40%;
+    height: 100%;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 80%;
+    margin: auto;
+}
+
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: 30em;
+    background-color: #d4d4d4;
+    margin-bottom: 1em;
+    background-image: linear-gradient(rgb(0, 247, 255) , rgb(247, 247, 247));
+}
+
+#banner_logo{
+    position: relative;
+    width: 20em;
+    height: 20em;
+}
+
+#catalog{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#transition2foot{
+    width: 100%;
+    height: 10em;
+    background-image: linear-gradient( rgb(247, 247, 247),rgb(0, 0, 0));
+}
+
+#foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 15em;
+    background-color: black;
+}
+
+.foot_bubble{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#us_bubbles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.us_bubble{
+    position: relative;
+    width: 24%;
+    height: 25em;
+    background-color: #dfdfdf;
+}
+
+.us_bubble:hover{
+    background-color: #d4d4d4;
+}
+
+.catalog_bubbles{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 20em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 1em 1em 1em 1em;
+}
+
+.catalog_category_title{
+    margin-left: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
+.catalog_bubble{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    min-width: 25em;
+    height: 100%;
+    z-index: 1;
+    margin-left: 1em;
+    margin-bottom: 2em;
+    padding: 1em 1em 1em 1em;
+    box-shadow: inset 5em 1em rgba(255, 217, 0, 0.685);
+}
+
+.cb_picture{
+    display: flex;
+    position: relative;
+    min-width: 60%;
+    height: 90%;
+    background-color: rgb(221, 221, 221);
+    border-right: 1em;
+    border: solid #dfdfdf 0.1em;
+}
+
+
+.cb_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    height: 90%;
+    margin-left: 1em;
+    min-width: 30%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section_title{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    position: relative;
+    top: 0px;
+    min-height: 4em;
+    width: 100%;
+    margin-bottom: 2em;
+    
+}
+
+.st_title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    min-width: 20%;
+    max-width: 45%;
+    margin: 1em 1em 1em 1em;
+}
+
+.st_description{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 60%;
+    min-width: 50%;
+    margin: 1em 1em 1em 1em;
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em 1em 1em 1em;
+}

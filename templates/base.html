@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename='css/main.css') }}">
+    <title>{{store['store_name']}}</title> 
+</head>
+<body>
+    <div id="navbar">
+        <div id="nav_name">
+            <p>{{store['store_name']}} : {{store['slogan']}}</p>
+        </div>
+        <div id="nav_sections">
+            <p><a href="#us">Nosotros</a></p>
+            <p><a href="#catalog">Catálogo</a></p>
+        </div>
+    </div>
+    <div id="content">
+        <div id="banner">
+            <div id="banner_logo">
+                <img width=100% height=auto src="{{url_for('static', filename='pictures/main_logo.png')}}" />
+            </div>
+        </div>
+        <div id="us">
+            <div class="section_title">
+                <div class="st_title">Nosotros</div>
+                <div class="st_description">
+                    Conoce más de nuestra empresa. Te platicamos nuestra misión, la esencia de nuestra empresa.
+                    Ubica dónde encontrar nuestro producto más cerca de ti y al mejor precio.
+                    Conoce más a cerca de los beneficios de nuestros productos.
+                </div>
+            </div>
+            <div id="us_bubbles">
+                <div class="us_bubble"></div>
+                <div class="us_bubble"></div>
+                <div class="us_bubble"></div>
+                <div class="us_bubble"></div>
+            </div>
+        </div>
+        <div id="catalog">
+            <div class="section_title">
+                <div class="st_title">Catálogo de Productos</div>
+                <div class="st_description">
+                    ¡Descubre los productos que tenemos para tí!
+                    Descubre el precio, propiedades e información relacionada con cada uno de nuestros productos.
+                    Entérate de nuestros nuevos lanzamientos y no te pierdas ninguno.
+                </div>
+            </div>
+            {% for category in products %}
+                <div class="catalog_category_title">{{category}}</div>
+                <div class="catalog_bubbles">
+                    {% for product in products[category] %}
+                        <div class="catalog_bubble">
+                            <div class="cb_picture">
+                                <img width = auto height = 100% src="static/Products/product_images/{{product['Imagen']}}"/>
+                            </div>
+                            <div class="cb_info">
+                                <h2>{{product['Articulo']}}</h2>
+                                <h4>{{product['Sabor']}}</h4>
+                                <h5>{{product['Variante']}}</h5>
+                                <p>{{product['Vaso']}} con {{product['Gramos']}} gramos</p>
+                                <p>{{product['Codigo']}}</p>
+                            </div>
+                        </div>
+                    {%endfor%}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="transition2foot"></div>
+    <div id="foot">
+       <div class="foot_bubble">
+           <h2>CONTACT INFO</h2>
+           <h4>{{store['store_name']}} ; {{store['slogan']}}</h4>
+           <ul>
+                <li> {{store['titular']}}</li>
+                <li><strong>Mail:</strong> {{store['titular_mail']}}</li>
+                <li><strong>Teléfono:</strong> {{store['titular_phone']}}</li>
+           </ul>
+           
+       </div> 
+       <div class="foot_bubble">
+           <h2>You liked this website?</h2>
+           <p>You can have one just like this!</p>
+           <p>Send us an email to blankhall@ciencias.unam.mx</p>
+       </div>
+    </div>
+</body>
+</html>
